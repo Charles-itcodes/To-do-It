@@ -15,7 +15,7 @@ namespace To_do_It.Data
             return TodoItems.Length;
         }
 
-        public todo[] FindAll()
+        public toDo[] FindAll()
         {
             return TodoItems;
         }
