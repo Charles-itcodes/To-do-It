@@ -30,29 +30,32 @@ namespace To_do_It.Models
         set { 
                 if (string.IsNullOrEmpty(value))
                 {
-                    throw new ArgumentNullException("Noooo you can not leave me empty i need first name (:");
+                    throw new ArgumentNullException(value, "Noooo you can not leave me empty i need first name (:");
                 }
                 else
                 {
                     firstName = value;
                 }    
 
-              }
-        }
+         }
+            }
 
         public string LastName{ 
 
         get { return lastName; } //getters
-        set { if(string.IsNullOrEmpty(value))
+            set
+            {
+                if (string.IsNullOrEmpty(value))
                 {
-                    throw new ArgumentNullException("Last Name can not be null or empty");
+                    throw new ArgumentNullException(value, "Noooo you can not leave me empty i need last name (:");
                 }
                 else
                 {
                     lastName = value;
                 }
 
-                } }  // setters
+            }
+        }  // setters
        
        
     }
