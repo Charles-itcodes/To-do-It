@@ -8,7 +8,7 @@ namespace To_do_It
         {
             Console.WriteLine("Below are the detals of person:");
 
-            Person person1 = new Person( 1, "Charles", "Rudahusha");
+            Person person1 = new Person( 1, "Charles", "");
 
             //Console.WriteLine(person1.PersonId);
             Console.WriteLine(person1.PersonId + " " + person1.FirstName + " " + person1.LastName);

@@ -43,7 +43,16 @@ namespace To_do_It.Models
         public string LastName{ 
 
         get { return lastName; } //getters
-        set { lastName = value; } }  // setters
+        set { if(string.IsNullOrEmpty(value))
+                {
+                    throw new ArgumentNullException("Last Name can not be null or empty");
+                }
+                else
+                {
+                    lastName = value;
+                }
+
+                } }  // setters
        
        
     }
