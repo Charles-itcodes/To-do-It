@@ -9,30 +9,30 @@ namespace To_do_It.Data
 {
     internal class TodoService
     {
-        private static toDo[] TodoItems = new toDo[0];
+        private static ToDo[] TodoItems = new ToDo[0];
         public int Size()
         {
             return TodoItems.Length;
         }
 
-        public toDo[] FindAll()
+        public ToDo[] FindAll()
         {
             return TodoItems;
         }
 
 
-        public toDo addNewTodo(string firstName, string lastName)
+        public ToDo addNewTodo(string firstName, string lastName)
         {
-            toDo newTodo = new toDo(PersonSequencer.NextPersonId(), firstName, lastName);
+            ToDo newTodo = new ToDo(PersonSequencer.NextPersonId(), firstName, lastName);
 
             TodoItems.Append(newTodo);
 
-            return new toDo;
+            return new ToDo;
         }
 
         public void Clear()
         {
-            TodoItems = new toDo[0];
+            TodoItems = new ToDo[0];
         }
     }
 }
