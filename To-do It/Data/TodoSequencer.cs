@@ -16,7 +16,7 @@ namespace To_do_It.Data
         }
         public static int Reset()
         {
-            ToDo = 0;
+            ToDo = 0
             return ToDo;
 
         }
