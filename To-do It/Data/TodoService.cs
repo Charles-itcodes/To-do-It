@@ -9,30 +9,33 @@ namespace To_do_It.Data
 {
     internal class TodoService
     {
-        private static ToDo[] TodoItems = new ToDo[0];
+        private static ToDo[] Todos = new ToDo[0];
         public int Size()
         {
-            return TodoItems.Length;
+            return Todos.Length;
         }
 
         public ToDo[] FindAll()
         {
-            return TodoItems;
+            return Todos;
         }
+        /*Create a new class called TodoService inside the Data folder.
+        a. TodoItems should have the same functionality as the PeopleService class.
+        b. Unit test TodoItems class
+        c. Commit changes.*/
 
-
-        public ToDo addNewTodo(string firstName, string lastName)
+        public ToDo addnewTodo(string firstName, string lastName)
         {
             ToDo newTodo = new ToDo(PersonSequencer.NextPersonId(), firstName, lastName);
 
-            TodoItems.Append(newTodo);
+            Todos.Append(newTodo);
 
-            return new ToDo;
+            return newTodo;
         }
 
         public void Clear()
         {
-            TodoItems = new ToDo[0];
+            Todos = new ToDo[0];
         }
     }
 }

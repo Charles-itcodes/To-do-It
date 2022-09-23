@@ -16,9 +16,13 @@ namespace To_do_It.Data
         }
         public static int Reset()
         {
-
-            return ToDo = 0;
+            ToDo = 0;
+            return ToDo;
 
         }
     }
 }
+/*Create a new class TodoSequencer in Data folder that have the same behaviour as
+PersonSequencer but just different names to suit ToDo instead of Person.
+a. Unit test TodoSequencer.
+b. Commit changes*/
