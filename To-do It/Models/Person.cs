@@ -8,21 +8,21 @@ namespace To_do_It.Models
 {
      public class Person
     {
-        private  int personId;// how to make it readonly?
-        private string firstName; //How to prevent saving NULL & Empty.
+        private readonly  int personId;
+        private string firstName; 
         private string lastName;
 
         public Person(int personId, string firstName, string lastName){
 
-            this.PersonId = personId;
-            this.FirstName = firstName;
-            this.LastName = lastName;
+            this.personId = personId;
+            FirstName = firstName;
+            LastName = lastName;
 
         }//constructor
 
         public int PersonId { 
         get { return personId; } //getters
-         set { personId = value; } } // setters
+         } 
 
          public string FirstName{ 
 

@@ -8,19 +8,15 @@ namespace To_do_It.Models
 {
     public class ToDo
     {
-        private int id;
+        private readonly int id;
         private string description;
         private bool done;
         private Person assignee;
-        public ToDo(int Id, string Description)
-        {
-            this.id = Id;
-            this.description = Description;
-        } 
+       
        public int Id
         {
             get { return id; }
-            set { id = value; }
+            
         }
         public string Description
         {
@@ -36,6 +32,11 @@ namespace To_do_It.Models
         {
             get { return assignee; }
             set { assignee = value; }
+        }
+        public ToDo(int Id, string Description)
+        {
+            this.id = Id;
+            this.description = Description;
         }
     }
 }
