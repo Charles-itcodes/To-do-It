@@ -23,9 +23,16 @@ namespace To_do_It.Data
         {
             return person[personId];
         }
-        public Person addPerson(string firstName,string lastNmae)
+        public Person addPerson(string firstName,string lastName)
         {
-            return person;
+            Person newPerson = new Person(PersonSequencer.NextPersonId(), firstName, lastName);
+           
+            person.Append(newPerson);
+            return newPerson;
+        }
+        public void Clear()
+        {
+            person = new Person[0];
         }
 
     }

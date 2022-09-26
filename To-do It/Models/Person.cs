@@ -11,6 +11,7 @@ namespace To_do_It.Models
         private readonly  int personId;
         private string firstName; 
         private string lastName;
+        private object v;
 
         public Person(int personId, string firstName, string lastName){
 

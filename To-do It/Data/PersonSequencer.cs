@@ -11,9 +11,9 @@ namespace To_do_It.Data
     {
         private static int personId;
 
-public static void NextPersonId()
+public static int NextPersonId()
         {
-         personId++;
+        return personId++;
         }
         public static int Reset() {
             personId = 0;

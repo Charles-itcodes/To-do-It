@@ -7,12 +7,12 @@ using To_do_It.Models;
 
 namespace To_do_It.Data
 {
-   public class TodoSequencer
+   public class  TodoSequencer
     {
         private static int todoId;
-        public static void NextTodoId()
+        public static int NextTodoId()
         {
-           
+            return todoId; 
         }
         public static int Reset()
         {
