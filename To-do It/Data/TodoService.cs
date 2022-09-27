@@ -48,6 +48,49 @@ namespace To_do_It.Data
             }
             return (ToDo[])toDoList.ToArray();
         }
+        public ToDo[] FindByAssignee(int personId)
+        {
+            ToDo[] toDoList = new ToDo[0];
 
+            for (int i = 0; i < toDoList.Length; i++)
+            {
+                if (toDoList[i].Assignee.PersonId == personId)
+                {
+                    toDoList.Append(toDoList[i]);
+                }
+            }
+            return (ToDo[])toDoList.ToArray();
+        }
+
+
+        public ToDo[] FindByAssignee(Person assignee)
+        {
+            ToDo[] toDoList = new ToDo[0];
+
+            for (int i = 0; i < toDoList.Length; i++)
+            {
+                if (toDoList[i].Assignee == assignee)
+                {
+                    toDoList.Append(toDoList[i]);
+                }
+            }
+            return (ToDo[])toDoList.ToArray();
+        }
+        public ToDo[] FindUnassignedTodoItems()
+        {
+            ToDo[] toDoList = new ToDo[0];
+
+            for (int i = 0; i < toDoList.Length; i++)
+            {
+                if (toDoList[i].Assignee == null)
+                {
+                    toDoList.Append(toDoList[i]);
+                }
+            }
+            return (ToDo[])toDoList.ToArray();
+        }
+
+        public void removeObjectFromArray() { }
     }
+
 }
