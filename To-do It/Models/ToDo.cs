@@ -11,11 +11,11 @@ namespace To_do_It.Models
         private readonly int id;
         private string description;
         private bool done;
-        private Person Assignee;
-        public ToDo(int Id, string Description)
+        private Person assignee;
+        public ToDo(int id, string description)
         {
-            this.id = Id;
-            this.description = Description;
+            this.id = id;
+            this.description = description;
         } 
        public int Id
         {
@@ -34,8 +34,8 @@ namespace To_do_It.Models
         }
         public Person Assignee
         {
-            get { return Assignee; }
-            set { Assignee = value; }
+            get { return assignee; }
+            set { assignee = value; }
         }
     }
 }

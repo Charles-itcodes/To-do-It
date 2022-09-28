@@ -9,30 +9,51 @@ namespace To_do_It.Data
 {
    public class PeopleService
     {
-        private static Person[] person = new Person[0];
+        private static Person[] personList = new Person[0];
 
         public int Size()
         {
-            return person.Length;
+            return personList.Length;
         }
         public Person[] FindAll() 
         { 
-            return person;
+            return personList;
         }
         public Person FindById(int personId)
         {
-            return person[personId];
+            return personList[personId];
         }
         public Person addPerson(string firstName,string lastName)
         {
             Person newPerson = new Person(PersonSequencer.NextPersonId(), firstName, lastName);
-           
-            person.Append(newPerson);
+
+            personList.Append(newPerson);
             return newPerson;
         }
         public void Clear()
         {
-            person = new Person[0];
+            personList = new Person[0];
+        }
+
+        public Person[] removeObjectFromArray(int index)
+        {
+           
+            Person[] newPersonList = new Person[0];
+
+           
+            for (int i = 0; i < personList.Length; i++)
+            {
+
+                if (i != index)
+                {
+                  
+                    Array.Resize(ref personList, personList.Length);
+                    newPersonList.CopyTo(personList, 0);
+
+                }
+               
+            }
+            return newPersonList;
         }
 
     }

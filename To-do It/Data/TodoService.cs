@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using To_do_It.Models;
@@ -11,7 +12,7 @@ namespace To_do_It.Data
     public class TodoService
     {
         private static ToDo[] toDoList = new ToDo[0];
-
+        //private static List<ToDo> ToDoList = new List<ToDo>(); 
         public int Size()
         {
             return toDoList.Length;
@@ -24,6 +25,8 @@ namespace To_do_It.Data
         {
             return toDoList[todoId];
         }
+
+
         public ToDo addToDo(string Description)
         {
             ToDo newToDo = new ToDo(TodoSequencer.NextTodoId(), Description);
@@ -31,10 +34,20 @@ namespace To_do_It.Data
             newToDo.Description = Description;
             return newToDo;
         }
+       /* public void addNewTodo(string description)
+        {
+            ToDo newTodo = new ToDo(TodoSequencer.NextTodoId(), description);
+            ToDoList.Add(newTodo);
+            TodoSequencer newTodoseq = new TodoSequencer();
+            newTodoseq.
+        }*/
+       
         public void Clear()
         {
             toDoList = new ToDo[0];
         }
+
+
         public  ToDo[] FindByDoneStatus(bool doneStatus)
         {
             ToDo[] toDoList = new ToDo[0];
@@ -48,6 +61,8 @@ namespace To_do_It.Data
             }
             return (ToDo[])toDoList.ToArray();
         }
+
+
         public ToDo[] FindByAssignee(int personId)
         {
             ToDo[] toDoList = new ToDo[0];
@@ -63,6 +78,7 @@ namespace To_do_It.Data
         }
 
 
+
         public ToDo[] FindByAssignee(Person assignee)
         {
             ToDo[] toDoList = new ToDo[0];
@@ -76,6 +92,9 @@ namespace To_do_It.Data
             }
             return (ToDo[])toDoList.ToArray();
         }
+
+
+
         public ToDo[] FindUnassignedTodoItems()
         {
             ToDo[] toDoList = new ToDo[0];
@@ -90,7 +109,34 @@ namespace To_do_It.Data
             return (ToDo[])toDoList.ToArray();
         }
 
-        public void removeObjectFromArray() { }
+        public ToDo[] removeObjectFromArray(int index)
+        {
+            //ToDo[] newToDoList = new ToDo[toDoList.Length-1];
+            ToDo[] newToDoList = new ToDo[0];
+
+            //int j = 0;
+            for (int i = 0; i < toDoList.Length; i++)
+            {
+                
+                if (i != index)
+                {
+                   // toDoList.Append(toDoList[i]);
+                    Array.Resize(ref toDoList, toDoList.Length);
+                    newToDoList.CopyTo(toDoList, 0);
+                   
+                }
+                //newToDoList[j] = toDoList[i];
+                // j++;
+                
+            }
+            return newToDoList;
+        }
+        
+
+
+
+
+
     }
 
 }

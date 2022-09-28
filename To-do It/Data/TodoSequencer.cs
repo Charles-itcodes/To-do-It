@@ -12,13 +12,20 @@ namespace To_do_It.Data
         private static int todoId;
         public static int NextTodoId()
         {
-            return todoId; 
+            return todoId++; 
         }
         public static int Reset()
         {
             todoId = 0;
             return todoId;
         }
+        public void Hello()
+        {
 
+        }
+        public static void Bye()
+        {
+
+        }
     }
 }
