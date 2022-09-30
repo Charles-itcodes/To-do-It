@@ -11,7 +11,7 @@ namespace To_do_It.Models
         private readonly  int personId;
         private string firstName; 
         private string lastName;
-        private object v;
+ 
 
         public Person(int personId, string firstName, string lastName){
 
@@ -31,7 +31,7 @@ namespace To_do_It.Models
         set { 
                 if (string.IsNullOrEmpty(value))
                 {
-                    throw new ArgumentNullException("Noooo you can not leave me empty i need first name (:");
+                    throw new Exception("Noooo you can not leave me empty i need first name (:");
                 }
                 else
                 {
@@ -46,14 +46,14 @@ namespace To_do_It.Models
         get { return lastName; } //getters
         set { if(string.IsNullOrEmpty(value))
                 {
-                    throw new ArgumentNullException("Last Name can not be null or empty");
+                    throw new Exception("Last Name can not be null or empty");
                 }
                 else
                 {
                     lastName = value;
                 }
 
-                } }  // setters
+                } }  
        
        
     }

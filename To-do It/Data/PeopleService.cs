@@ -26,8 +26,8 @@ namespace To_do_It.Data
         public Person addPerson(string firstName,string lastName)
         {
             Person newPerson = new Person(PersonSequencer.NextPersonId(), firstName, lastName);
-
-            personList.Append(newPerson);
+           Array.Resize(ref personList, personList.Length+1);
+            personList[personList.Length-1] = newPerson;
             return newPerson;
         }
         public void Clear()
