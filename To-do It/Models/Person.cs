@@ -8,53 +8,69 @@ namespace To_do_It.Models
 {
      public class Person
     {
-        private readonly  int personId;
+        private readonly int personId;
         private string firstName; 
         private string lastName;
- 
 
-        public Person(int personId, string firstName, string lastName){
 
+        public Person(string firstName, string lastName, int personId)
+        {
             this.personId = personId;
             FirstName = firstName;
-            LastName = lastName;
+            this.lastName = lastName;
+        }
 
-        }//constructor
+        public int PersonId
+        {
+            get
+            {
+                return personId;
+            }
+        }
 
-        public int PersonId { 
-        get { return personId; } //getters
-         } 
+        public string FirstName
+        {
+            get
+            {
+                return firstName;
+            }
 
-         public string FirstName{ 
 
-        get { return firstName; } //getters
-        set { 
-                if (string.IsNullOrEmpty(value))
+            set
+            {
+                if (string.IsNullOrWhiteSpace(value))
                 {
-                    throw new Exception("Noooo you can not leave me empty i need first name (:");
+                    throw new Exception("Firstname can't be null or empty.");
                 }
+
                 else
                 {
                     firstName = value;
-                }    
-
-              }
-        }
-
-        public string LastName{ 
-
-        get { return lastName; } //getters
-        set { if(string.IsNullOrEmpty(value))
-                {
-                    throw new Exception("Last Name can not be null or empty");
                 }
+            }
+
+        }
+        public string LastName
+        {
+            get
+            {
+                return lastName;
+            }
+
+            set
+            {
+                if (string.IsNullOrWhiteSpace(value))
+                {
+                    throw new Exception("Lastname can't be null or empty.");
+                }
+
                 else
                 {
                     lastName = value;
                 }
+            }
 
-                } }  
-       
-       
+        }
+
     }
 }
