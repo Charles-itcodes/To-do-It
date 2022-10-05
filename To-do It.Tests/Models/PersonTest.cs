@@ -20,7 +20,6 @@ namespace To_do_It.Tests.Models
             //Assert
             Assert.Contains("FirstName", result.Message);
 
-
         }
     }
 }

@@ -40,7 +40,7 @@ namespace To_do_It.Models
             {
                 if (string.IsNullOrWhiteSpace(value))
                 {
-                    throw new Exception("Firstname can't be null or empty.");
+                    throw new ArgumentException("FirstName can't be null or empty.");
                 }
 
                 else
@@ -61,7 +61,7 @@ namespace To_do_It.Models
             {
                 if (string.IsNullOrWhiteSpace(value))
                 {
-                    throw new Exception("Lastname can't be null or empty.");
+                    throw new ArgumentException("Lastname can't be null or empty.");
                 }
 
                 else
