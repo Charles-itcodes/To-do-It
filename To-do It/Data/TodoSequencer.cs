@@ -19,13 +19,5 @@ namespace To_do_It.Data
             todoId = 0;
             return todoId;
         }
-        public void Hello()
-        {
-
-        }
-        public static void Bye()
-        {
-
-        }
     }
 }

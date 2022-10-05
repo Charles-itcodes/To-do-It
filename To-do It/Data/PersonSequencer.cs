@@ -11,12 +11,27 @@ namespace To_do_It.Data
     {
         private static int personId;
 
-public static int NextPersonId()
-        {
-        return personId++;
+        public static int PersonId {
+            get 
+            {
+              return personId;
+            }
+            set
+            {
+                personId = value;
+            }
         }
-        public static int Reset() {
-            personId = 0;
-            return personId; }
+    
+    public static int NextPersonId()
+        {
+            personId++;
+
+            return personId; 
+        }
+    public static int Reset()
+        {
+        personId = 0;
+        return personId;
+        }
     }
 }

@@ -16,7 +16,7 @@ namespace To_do_It.Models
         public Person(string firstName, string lastName, int personId)
         {
             this.personId = personId;
-            FirstName = firstName;
+           this.firstName = firstName;
             this.lastName = lastName;
         }
 
@@ -61,7 +61,7 @@ namespace To_do_It.Models
             {
                 if (string.IsNullOrWhiteSpace(value))
                 {
-                    throw new ArgumentException("Lastname can't be null or empty.");
+                    throw new ArgumentException("LastName can't be null or empty.");
                 }
 
                 else
