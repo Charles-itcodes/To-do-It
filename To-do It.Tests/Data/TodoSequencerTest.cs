@@ -27,6 +27,24 @@ namespace To_do_It.Tests.Data
 
         [Fact]
 
+        //public void NextTodoIdTest()
+        //{
+
+        //    //Arrange
+        //    int expectedId1 = 1;
+        //    int expectedId2 = 2;
+        //    int id1;
+        //    int id2;
+
+        //    //Act
+        //    id1 = TodoSequencer.NextTodoId();
+        //    id2 = TodoSequencer.NextTodoId();
+
+
+        //    //Assert
+        //    Assert.Equal(expectedId1, id1);
+        //    Assert.Equal(expectedId2, id2);
+        //}
         public void NextTodoIdTest()
         {
 
