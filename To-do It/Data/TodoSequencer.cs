@@ -20,7 +20,7 @@ namespace To_do_It.Data
         public static int NextTodoId()
         {
             todoId++;
-            return  todoId;
+            return todoId;
         }
         public static int Reset()
         {
