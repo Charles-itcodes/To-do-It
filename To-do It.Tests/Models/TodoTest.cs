@@ -10,7 +10,7 @@ namespace To_do_It.Tests.Models
         {
             //Arrange
             string description1 = "Finish the assignment!";
-            string description2 = "Don't forget to sleep!!!";
+            string description2 = "Don't forget to eat and sleep!!!";
 
             //Act
             ToDo testTodo1 = new ToDo(TodoSequencer.NextTodoId(), description1);

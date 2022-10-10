@@ -10,9 +10,17 @@ namespace To_do_It.Data
    public class  TodoSequencer
     {
         private static int todoId;
+
+        public static int TodoId
+        {
+            get { return todoId; }
+            set { todoId = value; }
+        }
+
         public static int NextTodoId()
         {
-            return todoId++; 
+            todoId++;
+            return  todoId;
         }
         public static int Reset()
         {

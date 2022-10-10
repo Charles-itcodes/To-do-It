@@ -12,7 +12,8 @@ namespace To_do_It.Data
     public class TodoService
     {
         private static ToDo[] toDoList = new ToDo[0];
-        //private static List<ToDo> ToDoList = new List<ToDo>(); 
+        //private static List<ToDo> ToDoList = new List<ToDo>();
+
         public int Size()
         {
             return toDoList.Length;

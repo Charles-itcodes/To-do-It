@@ -37,24 +37,18 @@ namespace To_do_It.Data
 
         public Person[] removeObjectFromArray(int index)
         {
-           
             Person[] newPersonList = new Person[0];
-
            
             for (int i = 0; i < personList.Length; i++)
             {
 
                 if (i != index)
                 {
-                  
                     Array.Resize(ref personList, personList.Length);
                     newPersonList.CopyTo(personList, 0);
-
                 }
-               
             }
             return newPersonList;
         }
-
     }
 }
